@@ -72,7 +72,7 @@ export default function CatalogPage() {
       <section className="catalog-hero">
         <div className="catalog-logo"><img src={logo} alt="Mais Farda" /></div>
         <h1>Como posso lhe atender?</h1>
-        <p>Fábrica de vestuário personalizado para empresas{settings?.founding_year ? `, no mercado desde ${settings.founding_year}` : ""}. Produção sob encomenda, acabamento industrial e prazo documentado por escrito.</p>
+        <p>PRODUZIMOS O FARDAMENTO DA SUA EMPRESA COM QUALIDADE, PREÇO JUSTO E PONTUALIDADE.</p>
         <div className="catalog-stats">
           <div><b>{settings?.delivery_business_days_default ?? "—"}</b><span>dias úteis de prazo</span></div>
           <div><b>{settings?.min_order_quantity_default ?? "—"} un.</b><span>pedido mínimo por modelo</span></div>
