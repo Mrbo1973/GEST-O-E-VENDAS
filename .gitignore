@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+.venv/
+__pycache__/
+*.pyc
+.claude/
+maisfarda-backend/maisfarda.db

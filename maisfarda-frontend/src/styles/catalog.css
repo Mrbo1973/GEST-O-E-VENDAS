@@ -1,0 +1,196 @@
+/* Fonts (Barlow Condensed / Inter) are loaded via <link> in index.html. */
+
+.catalog-page {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #12121a;
+  --brand-navy: #0a0a3d;
+  --brand-royal: #0000ff;
+  --brand-mint: #bdded7;
+  --brand-border: #d8dade;
+  --brand-muted: #5b5d66;
+  --brand-muted-2: #8a8b93;
+}
+.catalog-page *, .catalog-page *::before, .catalog-page *::after { box-sizing: border-box; }
+.catalog-page a { color: var(--brand-royal); }
+.catalog-page a:hover { color: var(--brand-navy); }
+
+.catalog-hero {
+  background: var(--brand-navy);
+  padding: clamp(32px, 6vw, 72px) clamp(20px, 6vw, 64px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 48px);
+}
+.catalog-hero img { height: 56px; width: auto; object-fit: contain; align-self: flex-start; }
+.catalog-hero h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(40px, 7vw, 84px);
+  line-height: 0.98;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
+}
+.catalog-hero .lede {
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.5;
+  color: var(--brand-mint);
+  margin: 0;
+  max-width: 640px;
+}
+.catalog-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 56px);
+  border-top: 1px solid rgba(189, 222, 215, 0.25);
+  padding-top: clamp(24px, 3vw, 36px);
+}
+.catalog-stat-value {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(36px, 5vw, 56px);
+  color: #ffffff;
+  line-height: 1;
+}
+.catalog-stat-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-mint);
+  margin-top: 6px;
+}
+
+.catalog-section { padding: clamp(40px, 6vw, 72px) clamp(20px, 6vw, 64px); }
+.catalog-section h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 28px 0;
+  color: var(--brand-navy);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0;
+  border: 1px solid var(--brand-border);
+}
+.catalog-card { padding: 28px; border-right: 1px solid var(--brand-border); border-bottom: 1px solid var(--brand-border); }
+.catalog-card-name {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--brand-navy);
+  margin-bottom: 4px;
+}
+.catalog-card-price {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: var(--brand-royal);
+  margin-bottom: 18px;
+}
+.catalog-card-price span { font-family: "Inter", sans-serif; font-weight: 500; font-size: 14px; color: var(--brand-muted); }
+.catalog-card-row {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e5e6e9;
+  padding-top: 8px;
+  font-size: 14px;
+  color: #3a3b45;
+}
+.catalog-card-row span:first-child { color: var(--brand-muted-2); }
+.catalog-note { font-size: 13px; color: var(--brand-muted-2); margin-top: 14px; }
+
+.catalog-colors { display: flex; flex-wrap: wrap; gap: 24px; }
+.catalog-color-item { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 76px; }
+.catalog-color-dot { width: 52px; height: 52px; border-radius: 50%; border: 1px solid #cfd1d6; }
+.catalog-color-name { font-size: 12px; text-align: center; color: #3a3b45; }
+
+.catalog-budget-section { background: #f4f7f6; border-top: 1px solid var(--brand-border); border-bottom: 1px solid var(--brand-border); }
+.catalog-budget-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, 1fr); gap: 32px; align-items: start; }
+.catalog-field-label { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--brand-muted); margin-bottom: 10px; }
+.catalog-product-tabs { display: flex; gap: 0; border: 1px solid var(--brand-navy); width: fit-content; flex-wrap: wrap; }
+.catalog-product-tab {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-right: 1px solid var(--brand-navy);
+  background: #ffffff;
+  color: var(--brand-navy);
+}
+.catalog-product-tab.active { background: var(--brand-navy); color: #ffffff; }
+.catalog-select, .catalog-number, .catalog-input {
+  font-size: 15px;
+  padding: 10px 14px;
+  border: 1px solid var(--brand-navy);
+  background: #ffffff;
+  color: var(--brand-navy);
+  border-radius: 2px;
+  font-family: "Inter", sans-serif;
+}
+.catalog-number { width: 120px; }
+.catalog-input { width: 100%; }
+.catalog-color-swatch { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; padding: 0; }
+.catalog-summary { background: var(--brand-navy); color: #ffffff; padding: 28px; border-radius: 2px; }
+.catalog-summary-title { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 20px; }
+.catalog-summary-row { display: flex; justify-content: space-between; font-size: 15px; }
+.catalog-summary-row span:first-child { color: var(--brand-mint); }
+.catalog-summary-total {
+  border-top: 1px solid rgba(189, 222, 215, 0.3);
+  margin-top: 4px;
+  padding-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--brand-mint);
+}
+.catalog-warning {
+  margin-top: 16px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 2px solid var(--brand-mint);
+  font-size: 13px;
+  color: var(--brand-mint);
+}
+.catalog-submit {
+  margin-top: 22px;
+  width: 100%;
+  padding: 14px;
+  background: var(--brand-royal);
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+.catalog-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.catalog-conditions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border: 1px solid var(--brand-border); }
+.catalog-condition { padding: 24px; border-right: 1px solid var(--brand-border); }
+.catalog-condition h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 18px; color: var(--brand-navy); margin: 0 0 8px 0; }
+.catalog-condition p { font-size: 14px; color: var(--brand-muted); line-height: 1.5; margin: 0; }
+
+.catalog-footer { background: var(--brand-navy); padding: 24px clamp(20px, 6vw, 64px); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.catalog-footer span { font-size: 13px; color: var(--brand-mint); }
+
+.catalog-admin-link {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 10px;
+  border-radius: 4px;
+  z-index: 10;
+}

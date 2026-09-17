@@ -1,0 +1,92 @@
+/* Admin-only layout helpers built on top of the Industry design system's
+   tokens — mirrors the spacing/structure used in the provided
+   "Gestão de Produtos" mock-up. Component look (colors, borders, radii)
+   always comes from styles.css; this file only arranges layout. */
+
+.admin-shell {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-8);
+}
+
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-5);
+}
+.page-head h1 { margin: 0; }
+.page-head p { margin: var(--space-1) 0 0; opacity: 0.7; font-size: 14px; max-width: 60ch; }
+
+.table td, .table th { vertical-align: middle; }
+.num-cell {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 16px;
+  white-space: nowrap;
+}
+.actions-cell { display: flex; gap: var(--space-2); justify-content: flex-end; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+
+.config-warning {
+  margin: 0 var(--space-4) var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid var(--color-divider);
+  font-size: 13px;
+}
+.config-warning code {
+  background: var(--color-surface);
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+}
+
+.toast-stack {
+  position: fixed;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--color-neutral-900);
+  color: var(--color-bg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-divider);
+}
+.toast-error { border-color: var(--color-accent-400); }
+.toast-error svg { color: var(--color-accent-400); }
+
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-3);
+}
+.swatch-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-divider);
+  flex: none;
+}
+
+.malha-picker { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+.tag-btn { cursor: pointer; border: none; font: inherit; }
+
+.empty-note { margin-top: var(--space-4); opacity: 0.6; font-size: 14px; }
