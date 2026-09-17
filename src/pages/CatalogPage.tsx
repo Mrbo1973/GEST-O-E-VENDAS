@@ -73,10 +73,12 @@ export default function CatalogPage() {
         <div className="catalog-logo"><img src={logo} alt="Mais Farda" /></div>
         <h1>Como posso lhe atender?</h1>
         <p>PRODUZIMOS O FARDAMENTO DA SUA EMPRESA COM QUALIDADE, PREÇO JUSTO E PONTUALIDADE.</p>
-        <div className="catalog-stats">
-          <div><b>{settings?.delivery_business_days_default ?? "—"}</b><span>dias úteis de prazo</span></div>
-          <div><b>{settings?.min_order_quantity_default ?? "—"} un.</b><span>pedido mínimo por modelo</span></div>
-        </div>
+        {settings && (
+          <div className="catalog-stats">
+            <div><b>{settings.delivery_business_days_default}</b><span>dias úteis de prazo</span></div>
+            <div><b>{settings.min_order_quantity_default} un.</b><span>pedido mínimo por modelo</span></div>
+          </div>
+        )}
       </section>
 
       <section className="catalog-section">
